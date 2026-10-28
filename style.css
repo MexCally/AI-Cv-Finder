@@ -861,3 +861,441 @@ body {
         max-width: 94%;
     }
 }
+
+/* Homepage visual refinement */
+.home-page {
+    --home-ink: #14213d;
+    --home-muted: #5b6880;
+    --home-blue: #2457e6;
+    color: var(--home-ink);
+}
+
+.home-page .header {
+    min-height: 76px;
+    background: rgb(255 255 255 / 92%);
+    border-bottom-color: #e8edf7;
+    backdrop-filter: blur(14px);
+}
+
+.home-page .logo {
+    font-size: 23px;
+}
+
+.home-page .navigation {
+    align-items: center;
+    gap: 30px;
+}
+
+.home-page .navigation a {
+    transition: color 0.2s ease;
+}
+
+.home-page .navigation a[href="#home"] {
+    color: var(--home-blue);
+    font-weight: 700;
+}
+
+.home-page .hero {
+    position: relative;
+    grid-template-columns: minmax(0, 1.08fr) minmax(310px, 0.92fr);
+    gap: clamp(30px, 5vw, 72px);
+    min-height: 640px;
+    padding: clamp(65px, 8vw, 105px) max(8%, calc((100% - 1240px) / 2));
+    background:
+        radial-gradient(ellipse at 82% 45%, rgb(183 202 255 / 35%), transparent 34%),
+        linear-gradient(120deg, #f7f9ff 0%, #f1f5ff 54%, #fbfcff 100%);
+}
+
+.home-page .hero::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 48%;
+    height: 100%;
+    background: linear-gradient(135deg, transparent, rgb(255 255 255 / 42%));
+    content: "";
+    pointer-events: none;
+}
+
+.home-page .hero-content,
+.home-page .hero-visual {
+    position: relative;
+    z-index: 1;
+}
+
+.home-page .hero-content {
+    max-width: 660px;
+}
+
+.home-page .eyebrow {
+    margin-bottom: 18px;
+    font-size: 11px;
+    letter-spacing: 1.8px;
+}
+
+.home-page .hero h1 {
+    max-width: 650px;
+    font-size: clamp(42px, 5vw, 66px);
+    line-height: 1.08;
+    letter-spacing: -2.8px;
+}
+
+.home-page .hero h1 span {
+    display: block;
+}
+
+.home-page .hero-description {
+    max-width: 520px;
+    margin: 22px 0 26px;
+    color: var(--home-muted);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.home-page .hero-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.home-page .primary-button {
+    padding: 14px 21px;
+    border-radius: 9px;
+    box-shadow: 0 8px 18px rgb(36 87 230 / 18%);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.home-page .primary-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgb(36 87 230 / 24%);
+}
+
+.home-page .primary-button span {
+    margin-left: 8px;
+    transition: transform 0.2s ease;
+}
+
+.home-page .primary-button:hover span {
+    display: inline-block;
+    transform: translateX(3px);
+}
+
+.home-page .hero-secondary-link {
+    color: var(--home-ink);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.home-page .hero-secondary-link:hover {
+    color: var(--home-blue);
+}
+
+.home-page .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 40px;
+}
+
+.home-page .hero-stats > div {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    min-width: 0;
+}
+
+.home-page .stat-number {
+    display: grid;
+    place-items: center;
+    width: 27px;
+    height: 27px;
+    flex: 0 0 27px;
+    border: 1px solid #dce5ff;
+    border-radius: 8px;
+    background: #fff;
+    color: var(--home-blue);
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.home-page .hero-stats h3 {
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+.home-page .hero-stats p {
+    margin-top: 3px;
+    color: var(--home-muted);
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.home-page .hero-visual {
+    min-height: 410px;
+    overflow: visible;
+}
+
+.home-page .visual-circle {
+    width: min(355px, 33vw);
+    height: min(355px, 33vw);
+    border: 1px solid rgb(255 255 255 / 80%);
+    background: linear-gradient(145deg, #e0e9ff 4%, #b8ccff 58%, #9db8ff 100%);
+    box-shadow: inset 0 0 55px rgb(255 255 255 / 34%);
+}
+
+.home-page .main-card {
+    top: 48px;
+    width: min(315px, 88%);
+    padding: 29px;
+    border: 1px solid rgb(226 232 245 / 85%);
+    box-shadow: 0 28px 70px rgb(27 49 98 / 16%);
+}
+
+.home-page .card-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+}
+
+.home-page .main-card h2 {
+    font-size: 24px;
+    letter-spacing: -0.7px;
+}
+
+.home-page .mini-card {
+    right: -14px;
+    bottom: 24px;
+    max-width: 280px;
+    border: 1px solid #e8edf5;
+    box-shadow: 0 16px 38px rgb(27 49 98 / 12%);
+}
+
+.home-page .jobs-section {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 78px 8%;
+}
+
+.home-page .section-heading {
+    margin-bottom: 28px;
+}
+
+.home-page .section-heading h2,
+.home-page .about-section h2 {
+    font-size: clamp(28px, 3.2vw, 38px);
+    letter-spacing: -1.3px;
+    line-height: 1.2;
+}
+
+.home-page .section-heading p:not(.eyebrow) {
+    max-width: 600px;
+    color: var(--home-muted);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.home-page .job-empty-state {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 22px;
+    padding: 28px;
+    border-color: #e4eaf6;
+    border-radius: 16px;
+    background: linear-gradient(115deg, #f8faff, #fff 72%);
+    text-align: left;
+}
+
+.home-page .empty-state-icon {
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 15px;
+    background: #eaf0ff;
+    color: var(--home-blue);
+    font-size: 24px;
+}
+
+.home-page .empty-state-copy h3 {
+    font-size: 17px;
+}
+
+.home-page .empty-state-copy p {
+    max-width: 590px;
+    margin: 5px 0 0;
+    color: var(--home-muted);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.home-page .job-empty-state .primary-button {
+    white-space: nowrap;
+}
+
+.home-page .about-section {
+    padding: 82px 8%;
+    background:
+        radial-gradient(ellipse at 50% 0%, rgb(210 222 255 / 56%), transparent 55%),
+        #f4f7ff;
+}
+
+.home-page .about-section > p:last-child {
+    max-width: 680px;
+    color: var(--home-muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.home-page .footer {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-top: 28px;
+    padding-bottom: 28px;
+}
+
+.home-page a:focus-visible,
+.home-page button:focus-visible {
+    outline: 3px solid #8daaff;
+    outline-offset: 4px;
+}
+
+@media (max-width: 760px) {
+    .home-page .hero {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 15px;
+        min-height: auto;
+        padding: 64px 7% 42px;
+    }
+
+    .home-page .hero::before {
+        width: 100%;
+    }
+
+    .home-page .hero h1 {
+        max-width: 600px;
+        font-size: clamp(40px, 8vw, 58px);
+    }
+
+    .home-page .hero-visual {
+        width: 100%;
+        max-width: 480px;
+        min-height: 350px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .home-page .visual-circle {
+        width: min(285px, 70vw);
+        height: min(285px, 70vw);
+    }
+
+    .home-page .main-card {
+        top: 24px;
+        width: min(300px, 78%);
+    }
+
+    .home-page .mini-card {
+        right: 0;
+        bottom: 12px;
+    }
+
+    .home-page .jobs-section {
+        padding: 62px 7%;
+    }
+}
+
+@media (max-width: 600px) {
+    .home-page .hero {
+        padding: 48px 6% 34px;
+    }
+
+    .home-page .hero h1 {
+        font-size: clamp(34px, 9vw, 46px);
+        letter-spacing: -1.8px;
+    }
+
+    .home-page .hero-description {
+        margin-top: 17px;
+        font-size: 14px;
+    }
+
+    .home-page .hero-actions {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .home-page .hero-stats {
+        gap: 14px 10px;
+        margin-top: 28px;
+    }
+
+    .home-page .hero-stats > div {
+        gap: 7px;
+    }
+
+    .home-page .hero-stats h3 {
+        font-size: 11px;
+    }
+
+    .home-page .hero-stats p {
+        font-size: 9px;
+    }
+
+    .home-page .hero-visual {
+        min-height: 291px;
+    }
+
+    .home-page .main-card {
+        width: min(270px, 80%);
+        padding: 22px;
+    }
+
+    .home-page .main-card h2 {
+        font-size: 21px;
+    }
+
+    .home-page .jobs-section {
+        padding: 52px 6%;
+    }
+
+    .home-page .job-empty-state {
+        grid-template-columns: auto minmax(0, 1fr);
+        gap: 15px;
+        padding: 21px;
+    }
+
+    .home-page .empty-state-icon {
+        width: 44px;
+        height: 44px;
+    }
+
+    .home-page .empty-state-copy h3 {
+        font-size: 15px;
+    }
+
+    .home-page .empty-state-copy p {
+        font-size: 12px;
+    }
+
+    .home-page .job-empty-state .primary-button {
+        grid-column: 1 / -1;
+        justify-self: stretch;
+        text-align: center;
+    }
+
+    .home-page .about-section {
+        padding: 58px 6%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .home-page *,
+    .home-page *::before,
+    .home-page *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}

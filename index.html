@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="home-page">
 
     <header class="header" id="pageHeader">
         <a href="index.html" class="logo">
@@ -55,20 +55,38 @@
                     external job platforms, and brings relevant matches together.
                 </p>
 
+                <div class="hero-actions">
+                    <a href="apply.html" class="primary-button">
+                        Find jobs with my CV <span aria-hidden="true">→</span>
+                    </a>
+                    <a href="#jobs" class="hero-secondary-link">
+                        See how it works
+                    </a>
+                </div>
+
                 <div class="hero-stats">
                     <div>
-                        <h3>CV-led</h3>
-                        <p>CV-based job search</p>
+                        <span class="stat-number">01</span>
+                        <div>
+                            <h3>Upload your CV</h3>
+                            <p>Tell us about your experience</p>
+                        </div>
                     </div>
 
                     <div>
-                        <h3>Relevant</h3>
-                        <p>Relevant opportunities</p>
+                        <span class="stat-number">02</span>
+                        <div>
+                            <h3>Review matches</h3>
+                            <p>Explore roles picked for you</p>
+                        </div>
                     </div>
 
                     <div>
-                        <h3>Your choice</h3>
-                        <p>You apply to the jobs you select</p>
+                        <span class="stat-number">03</span>
+                        <div>
+                            <h3>Choose what’s next</h3>
+                            <p>Apply directly on the job site</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -77,7 +95,7 @@
                 <div class="visual-circle"></div>
 
                 <div class="floating-card main-card">
-                    <div class="card-icon">✦</div>
+                    <div class="card-icon" aria-hidden="true">✦</div>
 
                     <p class="small-label">
                         YOUR NEXT OPPORTUNITY
@@ -89,7 +107,7 @@
                 </div>
 
                 <div class="floating-card mini-card">
-                    <span class="check-icon">✓</span>
+                    <span class="check-icon" aria-hidden="true">✓</span>
 
                     <div>
                         <strong>Start with your CV</strong>
@@ -117,12 +135,15 @@
 
             <div class="job-grid">
                 <article class="job-empty-state">
-                    <h3>Your job matches are waiting</h3>
-                    <p>
+                    <div class="empty-state-icon" aria-hidden="true">✦</div>
+                    <div class="empty-state-copy">
+                        <h3>Your job matches are waiting</h3>
+                        <p>
                         Submit your CV to search external job platforms and
                         review personalized recommendations on this page after
                         submitting your CV.
-                    </p>
+                        </p>
+                    </div>
                     <a href="apply.html" class="primary-button">
                         Find jobs with my CV →
                     </a>
