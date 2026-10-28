@@ -10,7 +10,7 @@ website.
 
 - Responsive home, about, and CV submission pages.
 - CV upload validation for PDF and DOCX files up to 5 MB.
-- Required-field, email, and consent validation.
+- Required name and role-interest fields, plus consent validation.
 - Multipart form submission to an n8n webhook.
 - Dynamic display of job matches returned by the workflow directly on the
   application page.

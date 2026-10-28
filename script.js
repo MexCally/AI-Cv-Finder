@@ -380,7 +380,6 @@ if (applicationForm) {
 
     var validatedFields = [
         "fullName",
-        "email",
         "preferredJobTitle"
     ].map(function (id) {
         return document.getElementById(id);
@@ -404,9 +403,6 @@ if (applicationForm) {
 
         if (field.required && !value) {
             message = "This field is required.";
-        } else if (field.id === "email" &&
-            !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
-            message = "Enter a valid email address.";
         }
 
         return showFieldError(field, message);
@@ -424,9 +420,9 @@ if (applicationForm) {
         var file = cvFile.files[0];
 
         if (!file) {
-            uploadTitle.textContent = "Choose your CV file";
-            uploadDescription.textContent =
-                "Click here to browse files on your device";
+            uploadTitle.textContent = "Choose a PDF or DOCX file";
+            uploadDescription.textContent = "";
+            uploadDescription.hidden = true;
             uploadBox.style.borderColor = "";
             cvFile.setAttribute("aria-invalid", "false");
             return;
@@ -446,15 +442,16 @@ if (applicationForm) {
             uploadDescription.textContent =
                 "Selected on this device · " +
                 (file.size / 1024 / 1024).toFixed(2) + " MB";
+            uploadDescription.hidden = false;
             uploadBox.style.borderColor = "#138749";
         }
 
         if (fileError.textContent) {
             cvFile.value = "";
             cvFile.setAttribute("aria-invalid", "true");
-            uploadTitle.textContent = "Choose your CV file";
-            uploadDescription.textContent =
-                "Click here to browse files on your device";
+            uploadTitle.textContent = "Choose a PDF or DOCX file";
+            uploadDescription.textContent = "";
+            uploadDescription.hidden = true;
             uploadBox.style.borderColor = "";
         }
     });

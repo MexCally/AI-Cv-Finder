@@ -68,17 +68,6 @@
                                role="alert"></p>
                         </div>
 
-                        <div class="form-group">
-                            <label for="email">Email address *</label>
-                            <input type="email" id="email"
-                                   name="email"
-                                   placeholder="you@example.com"
-                                   autocomplete="email"
-                                   required
-                                   aria-describedby="emailError">
-                            <p id="emailError" class="field-error"
-                               role="alert"></p>
-                        </div>
                     </div>
 
                     <div class="form-section">
@@ -107,21 +96,22 @@
                             qualifications, skills and experience.
                         </p>
 
-                        <label for="cvFile" class="upload-box" id="uploadBox">
-                            <span class="upload-icon">↑</span>
-                            <strong id="uploadTitle">Choose your CV file</strong>
-                            <span id="uploadDescription">
-                                Click here to browse files on your device
-                            </span>
-                            <span class="upload-formats">
-                                PDF or DOCX · Maximum 5 MB
-                            </span>
-                        </label>
-
                         <input type="file" id="cvFile" name="cvFile"
                                accept=".pdf,.docx"
                                required
-                               aria-describedby="fileError">
+                               aria-describedby="fileError uploadFormats">
+
+                        <label for="cvFile" class="upload-box" id="uploadBox">
+                            <span class="upload-main-row">
+                                <span class="upload-browse">Browse...</span>
+                                <strong id="uploadTitle">Choose a PDF or DOCX file</strong>
+                            </span>
+                            <span id="uploadDescription" class="upload-description"
+                                  hidden></span>
+                            <span class="upload-formats" id="uploadFormats">
+                                PDF or DOCX · Maximum 5 MB
+                            </span>
+                        </label>
 
                         <p id="fileError" class="file-error"
                            role="alert"></p>
@@ -167,8 +157,8 @@
                     <div class="tip-item">
                         <span class="tip-number">01</span>
                         <div>
-                            <strong>Check your details</strong>
-                            <p>Use an email address you can access.</p>
+                            <strong>Use your preferred name</strong>
+                            <p>Enter the name you’d like us to use.</p>
                         </div>
                     </div>
 
