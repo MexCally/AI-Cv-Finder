@@ -694,7 +694,7 @@ if (applicationForm) {
                 }).find(function (value) {
                     return getDisplayText(value);
                 })
-            );
+            ).replace(/CV Analysis Missing/gi, "Your CV Analysis");
 
             resultsSummary.textContent = analysis ||
                 (jobs.length
